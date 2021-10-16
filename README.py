@@ -67,7 +67,6 @@ def save():
 
         Label(master, text="Success").place(x=50, y=400)
 
-
 b1 = Button(master, text="Submit", bg="lightblue", fg="black", command=save).place(x=50, y=360)
 
 
