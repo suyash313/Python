@@ -11,9 +11,17 @@ master.geometry("480x250")
 # Input part of the converter
 
 input_unit = Label(master, text="Select the unit in which you're inputting the weight").place(x=10, y=10)
+
+def sel():
+    if rv1.get() == 1:
+        Label(master, text="kg").place(x=425, y=50)
+    else:
+        Label(master, text="lbs").place(x=425, y=50)
+        
+
 rv1 = IntVar()
-r1 = Radiobutton(master, text="Kilograms", variable=rv1, value=1).place(x=300, y=10)
-r2 = Radiobutton(master, text="Pounds", variable=rv1, value=2).place(x=400, y=10)
+r1 = Radiobutton(master, text="Kilograms", variable=rv1, value=1, command=sel).place(x=300, y=10)
+r2 = Radiobutton(master, text="Pounds", variable=rv1, value=2, command=sel).place(x=400, y=10)
 
 input_weight = Label(master, text="Enter the weight").place(x=10, y=50)
 ev1 = StringVar()
